@@ -1,0 +1,173 @@
+ /* Reset some default styles for better consistency */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the header */
+.head {
+    background-color: rgb(16, 101, 154);
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    top: 0;
+    position: static;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #21241f; /* Change the color on hover */
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+    display: inline-block; /* Initially hidden on larger screens */
+    cursor: pointer;
+}
+
+.foot{
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+   background-color:#333;
+  
+}
+.foot-text {
+    color: white; /* Change this to the color you want */
+    text-align: center;
+}
+.card-top{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    display: inline-table;
+
+}
+.recent-activity{
+    display: inline;
+
+}
+
+@media (max-width: 1200px) {
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.2s;
+        z-index: 100;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+.change .bar2{
+    opacity: 0;
+}
+    .change .bar3 {  
+        transform: translate(0, -11px) rotate(45deg);
+    }
+    .expanded .nav {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(23, 25, 26);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        
+    }
+
+    .expanded{
+        display: flex;
+        z-index: 100;
+        opacity: 0.8;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .head {
+        padding: 5px 0;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .foot {
+        height: auto;
+    }
+
+    .foot-text {
+        font-size: 12px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .carousel-inner {
+        max-width: 100%;
+    }
+
+    .carousel-item {
+        max-height: 300px;
+    }
+
+    .card-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .about h1 {
+        font-size: 18px;
+    }
+}
